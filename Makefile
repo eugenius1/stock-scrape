@@ -8,7 +8,7 @@ install-dev:
 	pipenv install --dev
 
 test:
-	pipenv run pytest --cov=scraper
+	pipenv run pytest --cov=scraper --cov-report=xml
 
 run:
 	pipenv run python main.py
