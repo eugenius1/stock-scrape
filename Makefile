@@ -5,4 +5,4 @@ install:
 	pipenv install
 
 test:
-	pipenv run python -m unittest discover .
+	pipenv run pytest
