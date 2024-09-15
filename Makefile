@@ -4,5 +4,11 @@ SHELL := bash
 install:
 	pipenv install
 
+install-dev:
+	pipenv install --dev
+
 test:
-	pipenv run pytest
+	pipenv run pytest --cov=scraper
+
+run:
+	pipenv run python main.py
