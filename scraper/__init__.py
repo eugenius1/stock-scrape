@@ -80,8 +80,9 @@ def simply_wall_st(table: pd.DataFrame):
         try:
             if not sws_url or type(sws_url) != str:
                 try:
-                    sws_url = googlesearch.search(
-                        f'site:simplywall.st {ticker}', num_results=1)[0]
+                    search_results = googlesearch.search(
+                        f'site:simplywall.st {ticker}', num_results=1)
+                    sws_url = next(search_results)
                     sws_url = _main_url(sws_url)
                     # TODO: verify link, maybe by checking if it contains (nyse|nasdaq)
                     logging.info(sws_url)
