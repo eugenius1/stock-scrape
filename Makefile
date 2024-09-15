@@ -1,5 +1,8 @@
 SHELL := bash
 .SHELLFLAGS := -euo pipefail -c
 
+install:
+	pipenv install
+
 test:
-	python -m unittest discover .
+	pipenv run python -m unittest discover .
