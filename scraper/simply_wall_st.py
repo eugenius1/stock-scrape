@@ -57,7 +57,7 @@ def _find_first(pattern: str, page: str) -> str:
     return ""
 
 
-def simply_wall_st(table: pd.DataFrame) -> pd.DataFrame:
+def simply_wall_st(table: pd.DataFrame) -> pd.DataFrame:  # noqa: C901 # FIXME: Refactor
     """Table should be a pandas.DataFrame with these columns (in order):
     - Ticker
     - SWS URL (optionally filled with values)
@@ -82,7 +82,7 @@ def simply_wall_st(table: pd.DataFrame) -> pd.DataFrame:
         logging.info(f"{index+1}/{len(table)}: {ticker}...")
 
         try:
-            if not sws_url or type(sws_url) != str:
+            if not sws_url or sws_url is not str:
                 try:
                     search_results = googlesearch.search(
                         f"site:simplywall.st {ticker}", num_results=1
