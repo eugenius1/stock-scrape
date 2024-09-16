@@ -32,7 +32,7 @@ class TestRegexScrapers(unittest.TestCase):
 
 class TestUrlVerifier(unittest.TestCase):
     def test_(self):
-        news_url = "https://simplywall.st/stocks/us/semiconductors/nasdaq-xlnx/xilinx/news/is-it-too-late-to-consider-buying-xilinx-inc-nasdaqxlnx"
+        news_url = "https://simplywall.st/stocks/us/semiconductors/nasdaq-xlnx/xilinx/news/is-it-too-late-to-consider-buying-xilinx-inc-nasdaqxlnx"  # noqa: E501
         main_url = "https://simplywall.st/stocks/us/semiconductors/nasdaq-xlnx/xilinx"
         self.assertEqual(main_url, _main_url(news_url))
 
