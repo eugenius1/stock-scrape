@@ -8,7 +8,7 @@ install-dev:
 	pipenv install --dev
 
 test:
-	pipenv run pytest --cov=scraper --cov-report=xml
+	pipenv run pytest --cov-config=.coveragerc --cov=. --cov-report=xml
 
 lint:
 # stop the build if there are Python syntax errors or undefined names
